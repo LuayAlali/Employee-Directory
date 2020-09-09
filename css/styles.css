@@ -36,3 +36,85 @@ body{
 .hidden{
 	display:  none;
 }
+
+
+
+/* mobile layout design */
+
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 40px 1fr;
+	grid-template-areas: 
+	"header"
+	"main";
+	background-color: rgba(211, 211, 211, .05);
+	font-family: 'Oswald', sans-serif;
+}
+header{
+	grid-area: header;
+	font-size: 12px;
+	margin-top: 20px;
+}
+header h1{
+	padding-left: 15px;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.grid-container{
+grid-area: main;
+display: grid;
+grid-template-columns: 1fr ;
+grid-template-rows: auto;
+grid-gap: 30px;
+margin: 15px;
+}
+
+.card{
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 1fr;
+grid-gap: 5%;
+grid-template-areas: 
+"avatar text"
+"avatar text";
+border: 1px solid rgba(211, 211, 211, .8);
+border-radius: 8px;
+/* box-shadow: px; */
+padding: 5%;
+background-color: white;
+}
+
+.avatar{
+	grid-area: avatar;
+	border-radius: 60px;
+	align-self: center;
+}
+.text-container{
+	grid-area: text;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 20px 20px;
+	grid-template-areas:
+	"name"
+	"email"
+	"address";
+}
+.name{
+grid-area: name;
+align-self: start;
+}
+.email{
+	grid-area: email;
+	/* align-self: start; */
+	margin-top: 0;
+	font-size: 14px;
+	color: rgba(199, 191, 184, 0.8);
+}
+.address{
+	grid-area: address;
+	margin-top: 0;
+	font-size: 14px;
+	color: rgba(199, 191, 184, 0.8);
+}
