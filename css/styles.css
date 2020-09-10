@@ -50,6 +50,7 @@ body{
 	"main";
 	background-color: rgba(211, 211, 211, .05);
 	font-family: 'Oswald', sans-serif;
+	color: rgba(0,0,0,.75);
 }
 header{
 	grid-area: header;
@@ -69,6 +70,7 @@ grid-template-columns: 1fr ;
 grid-template-rows: auto;
 grid-gap: 30px;
 margin: 15px;
+max-width: 1500px;
 }
 
 .card{
@@ -117,4 +119,23 @@ align-self: start;
 	margin-top: 0;
 	font-size: 14px;
 	color: rgba(199, 191, 184, 0.8);
+}
+
+/* tablet layout */
+@media(min-width: 768px){
+body{
+	grid-template-rows: 70px 1fr;
+}
+	.grid-container{
+	grid-template-columns: 1fr 1fr;
+}
+header h1{
+	font-size: 20px;
+}
+
+}
+@media(min-width: 1024px){
+	.grid-container{
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
