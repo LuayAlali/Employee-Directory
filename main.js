@@ -109,3 +109,25 @@ modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 
 });
+
+// creating the search bar to find employee by name  
+const input = document.getElementById('searchfield');
+let cards = [];
+ cards = document.querySelectorAll('.card');
+
+input.addEventListener('keyup', () => {
+    let search = input.value.toLowerCase();
+    let names = [];
+     names = document.querySelectorAll('.name');
+ for(let i = 0; i < names.length; i++){
+    let name = names[i].innerText;
+      if(name.toLowerCase().indexOf(search) > -1){
+          name.parenNode.style.display = "";
+        }else {
+           name.parenNode.style.display = "none";
+        }
+   
+
+ }
+
+});
