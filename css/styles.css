@@ -36,6 +36,23 @@ body{
 .hidden{
 	display:  none;
 }
+.left,
+.right {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 38px;
+}
+
+.right {
+    top: 30%;
+    left: 100%;
+}
+
+.left {
+    top: 30%;
+    right: 100%;
+}
 
 
 
