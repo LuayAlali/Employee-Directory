@@ -99,15 +99,27 @@ body{
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: rgba(0,0,0,.75);
 }
+
+/* header section */
+
 header{
 	grid-area: header;
-	/* font-size: 12px; */
 	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
 }
 header h1{
 	padding-left: 15px;
 	font-size: 20px;
 	text-transform: uppercase;
+}
+#searchfield{
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	height: 35px;
+	align-self: center;
+	margin-right: 15px;
+	outline: none;
 }
 
 .grid-container{
