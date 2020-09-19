@@ -41,7 +41,7 @@ function displayEmployees(eData){
     })
    
 }
-
+// the modal overlay
 function displayModal(index) {
     let { name, dob, phone, email, location: {city, street, state, postcode }, picture } = employees[index];
     let date = new Date(dob.date);
@@ -70,12 +70,38 @@ gridContainer.addEventListener('click', e => {
     if(e.target !== gridContainer){
         const card  = e.target.closest('.card');
         const index = card.getAttribute('data-index');
-
         displayModal(index);
 
-    }
+        // changing index to a number
+        let indexNumber = parseInt(index);
 
-});
+        // Selecting the arrows
+        const leftArrow = document.querySelector('.left');
+        const rightArrow = document.querySelector('.right');
+
+        // event listeners for arrows
+    leftArrow.addEventListener('click', e =>{
+        if(indexNumber === 11){
+            indexNumber = 0;
+            displayModal(indexNumber);
+        } else if(indexNumber < 11){
+            indexNumber += 1;
+            displayModal(indexNumber);
+        }
+        
+    });
+         rightArrow.addEventListener('click', e => {
+             if(indexNumber === 0 ){
+                 indexNumber = 11;
+                 displayModal(indexNumber);
+             }else if(indexNumber > 0){
+                 indexNumber -= 1;
+                 displayModal(indexNumber);
+             }
+         });   
+        }
+
+    });
 
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
