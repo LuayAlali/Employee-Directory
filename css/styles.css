@@ -14,17 +14,22 @@ body{
 	bottom: 0;
 	background: rgba(100,100,100, 0.4);
 }
+/*  overlay modal styles */
 
 .modal{
 /*	width might need change for smaller screens */
-	width: 375px;  
+	width: 50%;  
 	margin: 15% auto auto;
-	position: relative;
+	/* position: relative; */
 	text-align: center;
 	background: #fff;
 	border: 1px solid #778;
 	border-radius: 5px;
 	padding: 30px 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -75%);
 }
 
 .modal-close{
@@ -32,6 +37,9 @@ body{
 	right: 15px; 
 	top: 5px; 
 	cursor: pointer;
+	background: white;
+	border:none;
+	outline: none;
 }
 .hidden{
 	display:  none;
@@ -53,7 +61,29 @@ body{
     top: 30%;
     right: 100%;
 }
-
+.email-m{
+	margin-top: 0;
+    padding-bottom: 15px;
+    color: lightgrey;
+}
+.city-m{
+	margin-top: 10px;
+    border-bottom: 1px solid lightGrey;
+   padding-bottom: 30px;
+    color: lightgrey;
+}
+.phone-m{
+	margin: 5px;
+    color: lightgrey;
+}
+.address-m{
+	margin: 5px;
+    color: lightgrey;
+}
+.birthday-m{
+	margin: 5px;
+    color: lightgrey;
+}
 
 
 /* mobile layout design */
@@ -71,12 +101,12 @@ body{
 }
 header{
 	grid-area: header;
-	font-size: 12px;
+	/* font-size: 12px; */
 	margin-top: 20px;
 }
 header h1{
 	padding-left: 15px;
-	font-size: 13px;
+	font-size: 20px;
 	text-transform: uppercase;
 }
 

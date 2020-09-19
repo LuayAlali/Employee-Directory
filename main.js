@@ -23,7 +23,7 @@ function displayEmployees(eData){
     employees.forEach((employee, index) => {
         let name = employee.name;
         let email = employee.email;
-        let city = employee.city;
+        let city = employee.location.city;
         let picture = employee.picture;
     
 
@@ -43,19 +43,21 @@ function displayEmployees(eData){
 }
 // the modal overlay
 function displayModal(index) {
-    let { name, dob, phone, email, location: {city, street, state, postcode }, picture } = employees[index];
+    let { name, dob, phone, email, location: {city, street, state, postcode }, picture } 
+    = employees[index];
+
     let date = new Date(dob.date);
 
     const modalHTML = `
     <img src="${picture.large}" alt="" class="avatar">
     <div class="text-container">
-        <h2 class="name">${name.first} ${name.last}</h2>
-        <p class="email">${email}</p>
-        <p class="address">${city}</p>
-        <hr />
-        <p>${phone}</p>
-        <p class="address"> ${location[street]}, ${state}, ${postcode} </p>
-        <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+        <h2 class="name-m">${name.first} ${name.last}</h2>
+        <p class="email-m">${email}</p>
+        <p class="city-m">${city}</p>
+        <br><br>
+        <p class="phone-m">${phone}</p>
+        <p class="address-m">${street}, ${state}, ${postcode} </p>
+        <p class="birthday-m">Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
     `;
 
