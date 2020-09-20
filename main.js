@@ -112,8 +112,6 @@ modalClose.addEventListener('click', () => {
 
 // creating the search bar to find employee by name  
 const input = document.getElementById('searchfield');
-let cards = [];
- cards = document.querySelectorAll('.card');
 
 input.addEventListener('keyup', () => {
     let search = input.value.toLowerCase();
