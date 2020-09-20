@@ -118,13 +118,15 @@ let cards = [];
 input.addEventListener('keyup', () => {
     let search = input.value.toLowerCase();
     let names = [];
-     names = document.querySelectorAll('.name');
+      names = document.querySelectorAll('.name');
  for(let i = 0; i < names.length; i++){
-    let name = names[i].innerText;
-      if(name.toLowerCase().indexOf(search) > -1){
-          name.parenNode.style.display = "";
+    let word = names[i].innerText;
+      if(word.toLowerCase().indexOf(search) > -1){
+          let card = names[i].parentNode.parentNode;
+          card.style.display = '';
         }else {
-           name.parenNode.style.display = "none";
+            let card = names[i].parentNode.parentNode;
+            card.style.display = 'none';
         }
    
 
