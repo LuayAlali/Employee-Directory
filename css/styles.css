@@ -150,6 +150,7 @@ border-radius: 8px;
 /* box-shadow: px; */
 padding: 5%;
 background-color: white;
+cursor: pointer;
 }
 
 .avatar{
